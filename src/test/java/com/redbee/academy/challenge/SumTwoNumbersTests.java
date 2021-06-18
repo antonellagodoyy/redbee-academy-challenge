@@ -27,4 +27,13 @@ public class SumTwoNumbersTests {
     assertNotNull(anotherResult, "The result cannot be null");
     assertEquals(2, anotherResult);
   }
+
+  @Test
+  @DisplayName("Test when all null values are sent")
+  public void testAllNullValues() {
+    Integer result = SumTwoNumbers.sum(null, null);
+    assertNotNull(result, "The result cannot be null");
+    assertEquals(0, result);
+
+  }
 }

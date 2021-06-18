@@ -20,6 +20,14 @@ public class SumArrayNumbersTests {
   }
 
   @Test
+  @DisplayName("Tests happy path")
+  public void testHappyPath2() {
+    Integer result = SumArrayNumbers.sum(List.of(-9,1,-2));
+    assertNotNull(result, "The result cannot be null");
+    assertEquals(-10, result);
+  }
+
+  @Test
   @DisplayName("Test empty list")
   public void testEmpty() {
     Integer result = SumArrayNumbers.sum(Collections.emptyList());
